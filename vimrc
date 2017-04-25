@@ -5,11 +5,13 @@ colorscheme monokai
 set t_Co=256
 autocmd VimEnter * NERDTree
 autocmd VimEnter * wincmd p
+set backspace=2
 
 set encoding=utf-8
 set guifont=Courier\ Droid\ Sans\ Mono\ for\ Powerline\ Nerd\ Font\ Complete\ 12
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
+" set runtimepath+=~/.vim/bundle/neobundle.vim/
 call vundle#begin()
 let NERDTreeShowHidden=1
 let g:syntastic_always_populate_loc_list = 1
@@ -19,6 +21,8 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 1
 let g:syntastic_check_on_up = 1
 let g:syntastic_javascript_checkers = ['eslint']
+let g:javascript_plugin_jsdoc = 1
+let g:javascript_plugin_flow = 1
 " alternatively, pass a path where Vundle should install plugins
 "call vundle#begin('~/some/path/here')
 
@@ -32,6 +36,12 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'Quramy/tsuquyomi'
 Plugin 'xuyuanp/nerdtree-git-plugin'
 Plugin 'ryanoasis/vim-devicons'
+Plugin 'scrooloose/syntastic'
+Plugin 'nathanaelkane/vim-indent-guides'
+Plugin 'mattn/emmet-vim'
+Plugin 'godlygeek/tabular'
+Plugin 'valloric/youcompleteme'
+Plugin 'plasticboy/vim-markdown'
 set number
 set tabstop=4
 
@@ -55,7 +65,6 @@ Plugin 'tpope/vim-surround'
 Plugin 'scrooloose/nerdcommenter'
 " Plugin 'valloric/youcompleteme'
 Plugin 'ervandew/supertab'
-Plugin 'scrooloose/syntastic'
 " Plugin 'altercation/vim-colors-solarized'
 
 " All of your Plugins must be added before the following line
@@ -73,4 +82,3 @@ filetype plugin indent on    " required
 "
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
-
